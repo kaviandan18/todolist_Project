@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update ToDo Task Page</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    {% include 'cdnlines.html' %}
+</head>
+<body class="cls3">
+    <div class="container">
+        <h1 class="text-center cls1">My To-Do-List</h1>
+        <div class="row">
+          <div class="offset-md-4 col-md-4">
+            <h1 class="cls2">Update Task Here</h1>
+            <form method="post" action="{% url 'savetodotask' task.id %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="task" value="{{task.todolist}}"  class="form-control"placeholder="Enter Your Task..."/>
+              </div>  
+              <div class="form-group">
+                  <input type="datetime-local" value="{{task.date}}"  name="datetime" class="form-control"/>
+              </div> 
+              <div class="form-group">
+                <center>
+                  <input type="submit" value="Update Task" class="btn btn-primary" id="form_btn" />
+                  <input type="reset" value="Clear" class="btn btn-danger" />
+                  <a href="{% url 'todolist' %}" class="btn btn-primary ">Back Home</a>
+                </center>
+              </div>
+            </form>
+</body>
+</html>

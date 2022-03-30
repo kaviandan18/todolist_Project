@@ -1,0 +1,32 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.cls1 {
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 75px;
+  font-family: cursive;
+  background-color: orange;
+  color: black;
+ 
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  box-shadow: -5px 3px 10px orange;
+}
+#form_btn {
+  font-family: cursive;
+}
+.cls2 {
+  background-color: #ff0000;
+  font-family: cursive;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -5px  3px 10px  black;
+}
+
+.cls3 {
+  background-color: #b3ffff;
+}
